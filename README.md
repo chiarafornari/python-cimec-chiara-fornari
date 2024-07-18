@@ -55,12 +55,12 @@ A general PSD plot is provided to check the occipital alpha (8-12 Hz) and fronta
 
 ## Initializate the environment
 
-The raw EEG data (with the three extentions: `.eeg` `.vhdr` `.vmrk`) provided as example should be seved in your local directory (variable name: bids_root). 
+The raw EEG data (with the three extentions: `.eeg` `.vhdr` `.vmrk`) provided as example should be saved in your local directory (variable name in the `.py` file: bids_root). 
 Rememer to change it accordlying before running the script! When you have to change information a comment `# CHANGE` appears.
 Once defined the directory, the script automatically reshape the data and results in the BIDS format. 
 
-To keep trak of all the processess, `.fif` files are saved in sub-folder (Filtereddata) that are automatically generated. I prefer to save also this data, so it is easier to check the quality and so on.
-To summarize, a report file is also saved for each participant in a sub-folder (Report) that are automaticallu generated.
+To keep trak of all the processess, `.fif` files are saved in sub-folder (Filtereddata) that is automatically generated. I prefer to save also this data, so it is easier to check the quality and so on.
+To summarize, a report file is also saved for each participant in a sub-folder (Report) that is automaticallu generated.
 
 ***
 
