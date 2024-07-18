@@ -25,11 +25,7 @@ It includes:
 
 For the analysis of EEG data is necessary to install MNE package and MNE-BIDS to save and convert the data in the BIDS format.
 
-Run the followings in a command line terminal: 
-
-`pip install mne` 
-
-`pip install mne-bids`
+Run the followings in a command line terminal: `pip install mne` and `pip install mne-bids`
 
 ***
 
@@ -39,14 +35,19 @@ Run the followings in a command line terminal:
 The raw EEG data are collected using BrainVision Recorder using a 64 channel active EasyCap with a 1000 Hz sampling frequency. The impedence of the eletrocdes was keept below 20 kΩ using a saline gel.
 The online reference electrode was TP9 and the ground electrode was Fpz.
 The signal is recorded for 3 minutes in a resting state condition asking to the participant to keep the eyes closed.
+
 #### Data filtering:
 Raw data were downsampled to 250 Hz and both highpass (0.1 Hz) and lowpass (40 Hz) were applied, as well as notch filter (48-52 Hz) to reduce line noise.
+
 #### Data quality:
 A visual inspection of the data is provided in order to check the quality of the signal and the presence of bad channels that in case are interpolated. HEOG, VEOG ans ECG channel are created to control for eye movement and heart rate.
+
 #### Data ri-referencing:
 In order to reduce the noise, the average electrodes references was applied.
+
 #### Independent Component Analysis (ICA):
 The ICA is applied and the bad components removed.
+
 #### Power spectral density (PSD):
 A general PSD plot is provided to check the occipital alpha (8-12 Hz) and frontal theta (4-8 Hz)
 
