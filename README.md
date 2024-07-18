@@ -14,10 +14,10 @@ It includes:
 
 | Package   | Version used | 
 |-----------|--------------|
-| MNE       | 1.7.1        | 
-| MNE-BIDS  | 0.15.0       |
-| matplotlib| 3.7.2        |
-| numpy     | 1.23.5       | 
+| [MNE-Python](https://mne.tools/stable/index.html)     | 1.7.1        | 
+| [MNE-BIDS](https://mne.tools/mne-bids/stable/index.html)  | 0.15.0       |
+| [Matplotlib](https://matplotlib.org/)| 3.7.2        |
+| [NumPy](https://numpy.org/)    | 1.23.5       | 
 | [SciPy](https://scipy.org/)    | 1.11.1       |
 
 
