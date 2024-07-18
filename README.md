@@ -3,12 +3,12 @@
 This repository contains the final project for the course **Python for (open) Neuroscience** taught by Luigi Petrucco at the Doctoral school in Cognitive and Brain Sciences at CIMeC, University of Trento.
 
 ***
-The project consists of a simple pre-processing pipeline for EEG data collected on humans. In the spirit of the course title, the script uses the BIDS format [1,2] to organize the data.  
+The project consists of a simple pre-processing pipeline for EEG data collected in humans. In the spirit of the course title, the script uses the BIDS format [1,2] to organize the data.  
 The assigment is built in spyder (5.4.3) using python (3.11.5)
 
 It includes:
 - a file with a custom Python module that contains the whole script (`python_assigment_final_BIDS_Fornari.py`).
-- an example of resting state (rs) EEG data for one subject.
+- an example of resting state (rs) EEG data for one older subject (ID: 045).
 
 ## Dependencies:
 
