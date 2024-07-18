@@ -10,7 +10,7 @@ It includes:
 - a file with a custom Python module that contains the whole script (python_assigment_final_BIDS_Fornari.py).
 - an example of resting state (rs) EEG data for one subject.
 
-## Dipendenze
+## Dependencies:
 
 | Package   | Version used | 
 |-----------|--------------|
