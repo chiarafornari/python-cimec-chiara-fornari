@@ -23,7 +23,7 @@ It includes:
 
 ## Installation
 
-For the analysis of EEG data is necessary to install MNE package [1] and MNE-BIDS [2,3] to save and convert the data in the BIDS format.
+For the analysis of EEG data is necessary to install MNE package [[1].(https://doi.org/10.3389/fnins.2013.00267)] and MNE-BIDS [[2].(https://doi.org/10.21105/joss.01896),[3].(https://doi.org/10.1038/s41597-019-0104-8)] to save and convert the data in the BIDS format.
 
 Run the followings in a command line terminal: `pip install mne` and `pip install mne-bids`
 
