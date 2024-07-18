@@ -14,7 +14,7 @@ It includes:
 
 | Package   | Version used | 
 |-----------|--------------|
-| mne       | 1.7.1        | 
+| MNE       | 1.7.1        | 
 | MNE-BIDS  | 0.15.0       |
 | matplotlib| 3.7.2        |
 | numpy     | 1.23.5       | 
@@ -23,7 +23,10 @@ It includes:
 
 ## Installation
 
-Run the following in a command line terminal: `pip install mne`
+For the analysis of EEG data is necessary to install MNE package and MNE-BIDS to save and convert the data in the BIDS format.
+Run the following in a command line terminal: 
+`pip install mne`
+`pip install mne-bids`
 
 ***
 
