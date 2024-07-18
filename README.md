@@ -27,7 +27,7 @@ Run the following in a command line terminal: `pip install mne`
 
 ***
 
-## EEG Data processing 
+## EEG Data info and processing 
 
 #### Data collection:
 The raw EEG data are collected using BrainVision Recorder using a 64 channel active EasyCap with a 1000 Hz sampling frequency. The impedence of the eletrocdes was keept below 20 kΩ using a saline gel.
@@ -41,8 +41,19 @@ A visual inspection of the data is provided in order to check the quality of the
 In order to reduce the noise, the average electrodes references was applied.
 #### Independent Component Analysis (ICA):
 The ICA is applied and the bad components removed.
-#### power spectral density (PSD):
+#### Power spectral density (PSD):
 A general PSD plot is provided to check the occipital alpha (8-12 Hz) and frontal theta (4-8 Hz)
+
+***
+
+## Initializate the environment
+
+The raw EEG data (with the three extentions: .eeg .vhdr .vmrk) provided as example should be seved in your local directory (variable name: bids_root). 
+Rememer to change it accordlying before running the script!
+Once defined the directory, the script automatically reshape the data and results in the BIDS format. 
+
+To keep trak of all the processess, .fif files are saved in sub-folder (Filtereddata) that are automatically generated. I prefer to save also this data, so it is easier to check the quality and so on.
+To summarize, a report file is also saved for each participant in a sub-folder (Report) that are automaticallu generated.
 
 ***
 
