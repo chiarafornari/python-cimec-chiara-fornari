@@ -40,10 +40,10 @@ The signal is recorded for 3 minutes in a resting state condition asking to the 
 Raw data were downsampled to 250 Hz and both highpass (0.1 Hz) and lowpass (40 Hz) filters were applied, as well as notch filter (48-52 Hz) to reduce the line noise.
 
 #### Data quality:
-A visual inspection of the data is provided in order to check the quality of the signal and the presence of bad channels that in case are interpolated. HEOG, VEOG ans ECG channel are created to control for eye movement and heart rate.
+A visual inspection of the data is provided in order to check the quality of the signal and the presence of bad channels that in case are interpolated. HEOG, VEOG and ECG channel are created to control/clean for eye movement and heart rate.
 
 #### Data ri-referencing:
-In order to reduce the noise, the average electrodes references was applied.
+In order to reduce the noise, the average electrodes offline references was applied.
 
 #### Independent Component Analysis (ICA):
 The ICA is applied and the bad components removed.
