@@ -37,7 +37,7 @@ The online reference electrode was TP9 and the ground electrode was Fpz.
 The signal is recorded for 3 minutes in a resting state condition asking to the participant to keep the eyes closed.
 
 #### Data filtering:
-Raw data were downsampled to 250 Hz and both highpass (0.1 Hz) and lowpass (40 Hz) were applied, as well as notch filter (48-52 Hz) to reduce the line noise.
+Raw data were downsampled to 250 Hz and both highpass (0.1 Hz) and lowpass (40 Hz) filters were applied, as well as notch filter (48-52 Hz) to reduce the line noise.
 
 #### Data quality:
 A visual inspection of the data is provided in order to check the quality of the signal and the presence of bad channels that in case are interpolated. HEOG, VEOG ans ECG channel are created to control for eye movement and heart rate.
