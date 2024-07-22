@@ -65,8 +65,8 @@ To summarize, a report file is also saved for each participant in a sub-folder (
 ***
 
 ## References
-[1] Alexandre Gramfort, Martin Luessi, Eric Larson, Denis A. Engemann, Daniel Strohmeier, Christian Brodbeck, Roman Goj, Mainak Jas, Teon Brooks, Lauri Parkkonen, and Matti S. Hämäläinen. MEG and EEG data analysis with MNE-Python. Frontiers in Neuroscience, 7(267):1–13, 2013. https://doi.org/10.3389/fnins.2013.00267.
+[1] Gramfort, et al. (2013). MEG and EEG data analysis with MNE-Python. _Frontiers in Neuroscience_, 7(267), 1–13. https://doi.org/10.3389/fnins.2013.00267.
 
-[2] Appelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896). https://doi.org/10.21105/joss.01896
+[2] Appelhoff, et al. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. _Journal of Open Source Software_ 4: (1896). https://doi.org/10.21105/joss.01896
 
-[3] Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., Flandin, G., Phillips, C., Delorme, A., Oostenveld, R. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Scientific Data, 6, 103. https://doi.org/10.1038/s41597-019-0104-8
+[3] Pernet, et al. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. _Scientific Data_, 6, 103. https://doi.org/10.1038/s41597-019-0104-8
