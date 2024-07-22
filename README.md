@@ -8,7 +8,7 @@ The assigment is built in Spyder (5.4.3) using Python (3.11.5).
 
 It includes:
 - a file with a custom Python module that contains the whole script (`python_assigment_final_BIDS_Fornari.py`).
-- an example of resting state (rs) EEG data for one older subject (ID: 045).
+- an example of resting state (rs) EEG data of one older adults subject (ID: 045).
 
 ## Dependencies
 
