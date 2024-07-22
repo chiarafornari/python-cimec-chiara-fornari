@@ -32,7 +32,7 @@ Run the followings in a command line terminal: `pip install mne` and `pip instal
 ## EEG Data info and processing 
 
 #### Data collection:
-The raw EEG data are collected using BrainVision Recorder using a 64 channel active EasyCap with a 1000 Hz sampling frequency. The impedence of the eletrocdes was keept below 20 kΩ using a saline gel.
+The raw EEG data are collected using BrainVision Recorder using a 64 channel active EasyCap with a 1000 Hz sampling rate frequency. The impedence of the eletrocdes was keept below 20 kΩ using a saline gel.
 The online reference electrode was placed on TP9 and the ground electrode on Fpz.
 The signal is recorded for 3 minutes in a resting state condition asking to the participant to keep the eyes closed.
 
