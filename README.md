@@ -33,7 +33,7 @@ Run the followings in a command line terminal: `pip install mne` and `pip instal
 
 #### Data collection:
 The raw EEG data are collected using BrainVision Recorder using a 64 channel active EasyCap with a 1000 Hz sampling frequency. The impedence of the eletrocdes was keept below 20 kΩ using a saline gel.
-The online reference electrode was TP9 and the ground electrode was Fpz.
+The online reference electrode was placed on TP9 and the ground electrode on Fpz.
 The signal is recorded for 3 minutes in a resting state condition asking to the participant to keep the eyes closed.
 
 #### Data filtering:
@@ -43,13 +43,13 @@ Raw data were downsampled to 250 Hz and both highpass (0.1 Hz) and lowpass (40 H
 A visual inspection of the data is provided in order to check the quality of the signal and the presence of bad channels that in case are interpolated. HEOG, VEOG and ECG channel are created to control/clean for eye movement and heart rate.
 
 #### Data ri-referencing:
-In order to reduce the noise, the average electrodes offline references was applied.
+In order to reduce the noise, the average electrodes offline reference was applied.
 
 #### Independent Component Analysis (ICA):
 The ICA is applied and the bad components removed.
 
 #### Power spectral density (PSD):
-A general PSD plot is provided to check the occipital alpha (8-12 Hz) and frontal theta (4-8 Hz)
+A general PSD plot is provided to check the occipital alpha (8-12 Hz) and frontal theta (4-8 Hz).
 
 ***
 
@@ -59,8 +59,8 @@ The raw EEG data (with the three extentions: `.eeg` `.vhdr` `.vmrk`) provided as
 Rememer to change it accordlying before running the script! When you have to change information a comment `# CHANGE` appears.
 Once defined the directory, the script automatically reshape the data and results in the BIDS format. 
 
-To keep trak of all the processess, `.fif` files are saved in sub-folder (Filtereddata) that is automatically generated. I prefer to save also this data, so it is easier to check the quality and so on.
-To summarize, a report file is also saved for each participant in a sub-folder (Report) that is automaticallu generated.
+To keep track of all the processess, `.fif` files are saved in sub-folder (Filtereddata) that is automatically generated. I prefer to save also this data, so it is easier to check the quality and so on.
+To summarize, a report file is also saved for each participant in a sub-folder (Report) that is automatically generated.
 
 ***
 
@@ -70,6 +70,3 @@ To summarize, a report file is also saved for each participant in a sub-folder (
 [2] Appelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896). https://doi.org/10.21105/joss.01896
 
 [3] Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., Flandin, G., Phillips, C., Delorme, A., Oostenveld, R. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Scientific Data, 6, 103. https://doi.org/10.1038/s41597-019-0104-8
-
-
-
