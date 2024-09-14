@@ -56,13 +56,13 @@ from scipy import signal
 # Variables
 ID = '045' ## CHANGE
 sID = 'sub-' + ID  
-session = 'ses-01'
+session = 'ses-01'  # if this is simpy "ses-{run}", consider define it from the run variable to keep them consistent and aligned
 task = 'restEC'
 run = '01'
 suffix = 'eeg'
 
 # Path
-bids_root = Path('C:/Users/chiara.fornari/Documents/Lezioni_PhD/YR1/Python/Final_assigment') ## CHANGE based on your directory
+bids_root = Path() ## CHANGE based on your directory
 eeg_file = bids_root / f'{ID}_RS_C_1.vhdr' # based on the name in which you saved the raw data
 
 # Load EEG data
@@ -81,8 +81,10 @@ interp_data_dir = bids_root / sID / session / suffix / "Filtereddata"
 if not interp_data_dir.exists():
     interp_data_dir.mkdir(parents=True)  # Create the folder and any missing parent directories
 reports = bids_root / sID / session / suffix / "Report" 
-if not reports.exists():
+if not reports.exists():  # LP: you can use the exist_ok parameter of the mkdir to avoid the if statement
     reports.mkdir(parents=True)  
+
+# LP : don't leave around commented code
 #code_dir = bids_root / "Code"
 #if not code_dir.exists():
 #    code_dir.mkdir(parents=True)  
@@ -95,9 +97,9 @@ reports.mkdir(parents=True, exist_ok=True)
 """ Update README """ 
 ###############################################################################
 
-# Define the path to your README file
-readme_file = 'C:/Users/chiara.fornari/Documents/Lezioni_PhD/YR1/Python/Final_assigment/README.txt'  # Update with your actual path
-
+# Define the path to your README file  # LP: define all custom variables at the beginning of the script
+readme_file = bids_root / 'README.txt'  # Update with your actual path
+# LP: I am not really following the logic of this readme update
 # Information to add to the README file
 additional_info = """
 
@@ -112,6 +114,7 @@ For inquiries or issues, contact [Chiara](mailto:chiara.fornari@unitn.it).
 """
 
 # Check if README file exists
+# LP: My suggestion would be to just use pathlib classes and methods to check if the file exists, not mix with os functions
 if os.path.exists(readme_file):
     # Open the README file in append mode and add additional information
     with open(readme_file, 'a') as f:
@@ -122,6 +125,7 @@ else:
     with open(readme_file, 'w') as f:
         f.write("# README\n\n")
         f.write("Initial content of README file.\n")
+        # LP: I guess this is leftover code
         f.write(additional_info)
     print(f"README file '{readme_file}' created and additional information added.")
     
@@ -132,6 +136,7 @@ else:
 
 # add other info
 raw.info['experimenter'] = 'Chiara Fornari'
+# LP: I would suggest keeping every single variable a user might want to change at the beginning of the script
 
 # Check the data structure
 print(raw)
@@ -223,6 +228,7 @@ print("FILTERS DONE")
 # Notch Filter: 48-52 Hz
 notch_raw = filt_raw.copy()
 notch_raw.notch_filter(freqs = [48,52])
+# LP: For all plots, I would try to find a way to save them without showing them, so one check them out only if needed
 notch = notch_raw.plot(start=start, duration=duration, n_channels=n_channels, bgcolor='w', color='g', scalings=scalings) 
 print("NOTCH DONE")
 
@@ -262,6 +268,7 @@ ch_removed = 0 # CHANGE!!!!#
 ###############################################################################
 
 heog_ch_name = 'HEOG'
+# LP: some hardcoding here as well
 mne.set_bipolar_reference(inst = interp_bc, anode = ['FT9'], cathode = ['FT10'], ch_name= heog_ch_name, drop_refs= False, copy = False)
 veog_evoked = mne.channels.combine_channels(interp_bc, groups= dict(VEOG = [0,1]), method= 'mean', keep_stim= True)
 ecg_evoked = mne.channels.combine_channels(interp_bc, groups= dict(ECG = [35,35]), method= 'mean', keep_stim= True)
@@ -285,7 +292,7 @@ interp_bc.plot(start=start, duration=duration, n_channels=n_channels, bgcolor='w
 
 # recall for saving in the report but not showing it
 rw = raw.plot(start=start, duration=duration, n_channels=n_channels, scalings=scalings) 
-plt.close() 
+plt.close()  # LP: this is what I meant - maybe have a variable at the beginning of the script that you can set to True or False to show the plots
 dwn = dwnsamp_raw.plot(start=start, duration=duration, n_channels=n_channels, bgcolor='w', color='y', scalings=scalings)
 plt.close() 
 filt = filt_raw.plot(start=start, duration=duration, n_channels=n_channels, bgcolor='w', color='b', scalings=scalings) 
@@ -345,6 +352,8 @@ print("SAVED")
 
 # processing ICA
 ica_database = ave_ref.copy()
+# LP: these (n_components, max_iter...) is exactly the kind of parameters that you want to keep up center in the beghinning of the script,
+# maybe even uppercase! 
 ica = mne.preprocessing.ICA(n_components= 62, max_iter="auto", random_state=97) # Extended ICA: Infomax; Defaults ICA: fastica
 ica.fit(ica_database)
 
